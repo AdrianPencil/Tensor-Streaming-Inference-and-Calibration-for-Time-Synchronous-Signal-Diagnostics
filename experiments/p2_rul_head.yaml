@@ -1,0 +1,21 @@
+synthetic:
+  seed: 3
+  n_sensors: 8
+  n_steps: 20000
+  dt_s: 0.01
+  anomaly_rate: 0.002
+
+streaming:
+  allowed_lateness_s: 0.1
+  watermark_period_s: 0.5
+
+ml:
+  enabled: false
+  device: cpu
+
+p2:
+  rul_p: [0.1, 0.5, 0.9]
+
+run:
+  name: p2_rul_head
+  write_artifacts: true

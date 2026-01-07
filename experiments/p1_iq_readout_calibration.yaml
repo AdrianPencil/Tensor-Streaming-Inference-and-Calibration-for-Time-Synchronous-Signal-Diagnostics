@@ -1,0 +1,18 @@
+synthetic_iq:
+  seed: 5
+  n_samples: 200000
+  fs_hz: 1000000.0
+  tone_hz: 50000.0
+  snr_db: 10.0
+  dc_i: 0.02
+  dc_q: -0.01
+  gain_imbalance: 1.08
+  phase_error_rad: 0.06
+
+ml:
+  enabled: false
+  device: cpu
+
+run:
+  name: p1_iq_readout_calibration
+  write_artifacts: true

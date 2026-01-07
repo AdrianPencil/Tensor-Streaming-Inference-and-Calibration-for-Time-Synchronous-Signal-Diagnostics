@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\title{Streaming Signal Platform (SSP): Event-Time Replayable Early Warning with Calibrated Alerts and RCA}
+\author{SSP Authors}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+SSP is a streaming and replay platform for early-warning anomaly alerts with calibrated false-alarm control and root-cause localization. The system integrates event-time semantics, deterministic replay, first-class contract checks, and unified evaluation metrics. SSP includes filtering/fusion, prognostics, and forecasting heads that share the same infrastructure.
+\end{abstract}
+
+\section{Introduction}
+Operational telemetry streams must handle late and out-of-order data while still emitting reliable alerts. False alarms under drift, missing root cause, and non-replayable evaluation are common failure modes. SSP addresses these with event-time correct streaming, deterministic replay, calibrated alerting, and RCA validated by synthetic ground truth.
+
+\section{System overview}
+SSP is composed of:
+\begin{itemize}
+  \item platform core: event-time primitives, windowing, replay, sources/sinks
+  \item contracts: bounds, redundancy, and spectral checks that emit structured events
+  \item pipelines: P4 filtering, P1 detection, P2 prognostics, P3 forecasting
+  \item workflows: orchestration, metadata, artifacts, reports
+\end{itemize}
+
+\section{Methodology}
+The methodology is detailed in the docs:
+\begin{itemize}
+  \item event time and replay
+  \item early detection metrics
+  \item calibration and false alarm control
+  \item RCA and drift
+\end{itemize}
+
+\section{Experiments}
+Experiments are configured via YAML files under \texttt{experiments/} and run via the CLI. Synthetic generators provide ground truth for correctness validation without requiring large real datasets.
+
+\section{Conclusion}
+SSP provides a coherent engineering platform for reliable early-warning detection on streaming signals, with determinism, calibration, and attribution built in.
+\end{document}

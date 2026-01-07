@@ -1,0 +1,21 @@
+synthetic:
+  seed: 1
+  n_sensors: 12
+  n_steps: 25000
+  dt_s: 0.01
+  anomaly_rate: 0.003
+  mean_shift_scale: 2.5
+  var_jump_scale: 3.0
+  correlation_break_prob: 0.0008
+
+streaming:
+  allowed_lateness_s: 0.1
+  watermark_period_s: 0.5
+
+ml:
+  enabled: false
+  device: cpu
+
+run:
+  name: p1_synth_rca
+  write_artifacts: true

@@ -1,0 +1,16 @@
+dataset:
+  name: nab
+  path: data/external/nab
+
+streaming:
+  allowed_lateness_s: 5.0
+  watermark_period_s: 10.0
+
+ml:
+  enabled: false
+  device: cpu
+
+run:
+  name: p1_nab_replay
+  replay_mode: true
+  write_artifacts: true

@@ -1,0 +1,29 @@
+run:
+  name: p1_orchestrated_replay_manifest
+  write_artifacts: true
+
+synthetic:
+  seed: 7
+  n_sensors: 10
+  n_steps: 30000
+  dt_s: 0.01
+  anomaly_rate: 0.002
+  mean_shift_scale: 2.0
+  var_jump_scale: 2.5
+  missing_burst_prob: 0.001
+
+streaming:
+  allowed_lateness_s: 0.1
+  watermark_period_s: 0.5
+
+ml:
+  enabled: true
+  device: cuda
+
+orchestration:
+  mode: single
+  deterministic_replay: true
+  manifest:
+    include_env_fingerprint: true
+    include_code_fingerprint: true
+    include_config_hash: true

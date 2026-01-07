@@ -1,0 +1,21 @@
+synthetic:
+  seed: 0
+  n_sensors: 8
+  n_steps: 20000
+  dt_s: 0.01
+  anomaly_rate: 0.002
+  mean_shift_scale: 2.0
+  var_jump_scale: 3.0
+  missing_burst_prob: 0.0005
+
+streaming:
+  allowed_lateness_s: 0.1
+  watermark_period_s: 0.5
+
+ml:
+  enabled: false
+  device: cpu
+
+run:
+  name: p1_synth_early_warning
+  write_artifacts: true
