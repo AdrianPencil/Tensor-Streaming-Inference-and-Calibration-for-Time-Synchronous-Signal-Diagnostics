@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it."
+title: "streaming-signal-platform"
+type: software
+authors:
+  - given-names: "Adrian"
+    family-names: "Pencil"
+repository-code: "https://github.com/your-org/streaming-signal-platform"
+abstract: >
+  A streaming + replay platform for early-warning anomaly alerts with calibrated false-alarm control
+  and root-cause localization, extended with filtering/fusion, failure-risk prognostics, and forecasting.
+license: MIT
+keywords:
+  - streaming
+  - event-time
+  - anomaly-detection
+  - calibration
+  - root-cause-analysis
+  - signal-processing
+  - replay
+  - reproducibility
+version: "0.1.0"
+date-released: "2025-12-31"
